@@ -1,6 +1,6 @@
 package com.balint;
 
-public class Tulajdonos {
+public final class Tulajdonos {
     private String tulajdonosNeve;
 
     public void setNev(String nev) { this.tulajdonosNeve = nev; }
