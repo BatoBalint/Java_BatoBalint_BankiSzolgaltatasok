@@ -1,7 +1,7 @@
 package com.balint;
 
 public class MegtakaritasiSzamla extends Szamla {
-    private static int alapKamat = 10;
+    private final int alapKamat = 10;
     private int kamat = alapKamat;
 
     public void setKamat(int kamat) { this.kamat = kamat; }
