@@ -35,14 +35,18 @@ public class Bank {
     public int Osszegyenleg(Tulajdonos tulajdonos) {
         int sum = 0;
         for (Szamla szamla : szamlak) {
-            if (szamla.getTulajdonos() == tulajdonos) sum += szamla.getEgyenleg();
+            if (szamla != null) {
+                if (szamla.getTulajdonos() == tulajdonos) sum += szamla.getEgyenleg();
+            }
         }
         return sum;
     }
     public Szamla LegnagyobbEgyenleguSzamla(Tulajdonos tulajdonos) {
         int biggest = 0;
         for (int i = 0; i < szamlak.length; i++) {
-            if (szamlak[i].getEgyenleg() > szamlak[biggest].getEgyenleg()) biggest = i;
+            if (szamlak[i] != null && szamlak[biggest] != null) {
+                if (szamlak[i].getEgyenleg() > szamlak[biggest].getEgyenleg()) biggest = i;
+            }
         }
         return szamlak[biggest];
     }

@@ -10,4 +10,9 @@ public final class Tulajdonos {
     public Tulajdonos(String nev) {
         this.tulajdonosNeve = nev;
     }
+
+    @Override
+    public String toString() {
+        return this.tulajdonosNeve;
+    }
 }
