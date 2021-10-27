@@ -1,7 +1,5 @@
 package com.balint;
 
-import jdk.jshell.spi.ExecutionControl;
-
 public class Szamla extends BankiSzolgaltatas {
     protected int egyenleg = 0;
 
@@ -16,5 +14,9 @@ public class Szamla extends BankiSzolgaltatas {
     }
     public boolean Kivesz(int osszeg) {
         throw new UnsupportedOperationException("No");
+    }
+
+    public Kartya UjKartya(String kartyaszam) {
+        return new Kartya(this.getTulajdonos(), this, kartyaszam);
     }
 }
